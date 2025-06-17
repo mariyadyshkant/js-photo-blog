@@ -4,37 +4,23 @@
     box-sizing: border-box;
 }
 
+/* HEADER */
 header {
     background-image: url(./img/wall.png);
     background-repeat: repeat-x;
     text-align: center;
+    font-size: 3rem;
 }
 
 h1 {
     padding: 2rem;
 }
 
+/* MAIN SECTION */
 main {
     background-image: url(./img/cork.png);
     background-size: cover;
     padding: 1rem;
-}
-
-img {
-    width: 300px;
-
-}
-
-.card {
-    background-color: white;
-    width: 80%;
-    height: 110%;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
 }
 
 .container {
@@ -46,27 +32,54 @@ img {
     align-items: center;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* gap: 1rem; */
+}
+
+/* COL & CARD */
 .col-4 {
     width: calc(100% / 12 * 4);
-    margin: 0 -1rem;
+    margin: 4rem 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.row {
+.card {
+    background-color: white;
+    width: 80%;
+    padding: 15px;
+    margin: 0 1rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* CONTENUTI ALL'INTERNO DELLA CARD */
+.card_title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+img {
+    width: 400px;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.8rem;
 }
 
 #pin {
-    width: 8%;
+    width: 10%;
     position: absolute;
-    left: 46%;
-    top: -3%;
+    left: 45%;
+    top: -2%;
 
 }
-
-.card_title {}

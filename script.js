@@ -16,11 +16,12 @@ fetch(endPoint)
             const picturesMarkUpStr = `
             <div class="col-4">    
                 <div class="card">
-                    <h2 class="card_title">${title}</h2>
                     <div class="card_img">
+                        <img id="pin" src="./img/pin.svg" alt="">
                         <img src="${url}" alt="">
                     </div>
                     <div class="card_body">
+                        <h2 class="card_title">${title}</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
