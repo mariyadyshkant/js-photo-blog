@@ -14,7 +14,7 @@ fetch(endPoint)
             const { title, url } = picture;
             console.log(title, url);
             const picturesMarkUpStr = `
-            <div class="col-4">    
+            <div class="col-4 col-6-md">    
                 <div class="card">
                     <div class="card_img">
                         <img id="pin" src="./img/pin.svg" alt="">
