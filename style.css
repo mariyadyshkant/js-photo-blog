@@ -1,0 +1,40 @@
+header {
+    background-image: url(./img/wall.png);
+    background-repeat: repeat-x;
+    text-align: center;
+}
+
+h1 {
+    padding: 2rem;
+}
+
+main {
+    background-image: url(./img/cork.png);
+    background-size: cover;
+    padding: 1rem;
+}
+
+img {
+    width: 200px;
+
+}
+
+.card {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+}
+
+.container {
+    width: 80%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-4 {
+    width: calc(100% / 12 * 4);
+}
