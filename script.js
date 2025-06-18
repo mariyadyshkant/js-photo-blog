@@ -1,6 +1,7 @@
 console.log("Photo Blog");
 const row = document.querySelector(".row");
 console.log(row);
+const overlayDiv = document.querySelector("#overlay_div");
 
 const endPoint = ("https://lanciweb.github.io/demo/api/pictures/")
 
@@ -14,11 +15,11 @@ fetch(endPoint)
             const { title, url } = picture;
             console.log(title, url);
             const picturesMarkUpStr = `
-            <div class="col-4 col-6-md">    
+            <div class="col-4">    
                 <div class="card">
                     <div class="card_img">
                         <img id="pin" src="./img/pin.svg" alt="">
-                        <img src="${url}" alt="">
+                        <img class="img" src="${url}" alt="">
                     </div>
                     <div class="card_body">
                         <h2 class="card_title">${title}</h2>
@@ -29,18 +30,26 @@ fetch(endPoint)
             `
             row.insertAdjacentHTML("beforeend", picturesMarkUpStr)
 
-        });
+            const blogImgs = document.querySelectorAll(".img");
+            blogImgs.forEach(img => {
+                img.addEventListener("click", () => {
+                    console.log("Cliccato su Immagine");
+                    overlayDiv.classList.remove("close_div");
+                    const overlayImg = document.querySelector(".overlay_pic");
+                    overlayImg.src = img.src;
+                });
+            });
 
-    })
-    .catch(error => {
-        console.error(error);
-    })
+        })
+            .catch(error => {
+                console.error(error);
+            })
+    });
 
 const closeBtn = document.querySelector(".close_btn");
-const overlayEl = document.querySelector("#overlay_div");
-
 closeBtn.addEventListener("click", () => {
     console.log("Cliccato su Chiudi");
-    overlay
-
+    overlayDiv.classList.add("close_div");
 });
+
+
