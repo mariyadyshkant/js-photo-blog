@@ -4,8 +4,8 @@ console.log(row);
 
 const endPoint = ("https://lanciweb.github.io/demo/api/pictures/")
 
-
-// for (let i = 0; i < 6; i++) {
+// Fetching data from the API
+// and displaying it on the page
 fetch(endPoint)
     .then(response => response.json())
     .then(data => {
@@ -35,4 +35,12 @@ fetch(endPoint)
     .catch(error => {
         console.error(error);
     })
-//}
+
+const closeBtn = document.querySelector(".close_btn");
+const overlayEl = document.querySelector("#overlay_div");
+
+closeBtn.addEventListener("click", () => {
+    console.log("Cliccato su Chiudi");
+    overlay
+
+});
