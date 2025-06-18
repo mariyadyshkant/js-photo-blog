@@ -81,14 +81,14 @@ main {
     overflow: hidden;
 }
 
-img {
+.img {
     width: 100%;
     margin-bottom: 1rem;
     transition: transform 0.3s ease-in;
 
 
     &:hover {
-        cursor: pointer;
+        cursor: zoom-in;
         transform: scale(1.3) rotate(10deg) translate(0, 10px);
         transition: transform 0.3s ease-out;
         /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
@@ -162,9 +162,11 @@ p {
 /* OVERLAY */
 .open_div {
     position: fixed;
-    top: 0%;
-    left: 10%;
-    width: 80%;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 80%;
     height: 90%;
     background-color: white;
     padding: 1rem 1rem 2rem 1rem;
@@ -178,15 +180,18 @@ p {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    margin-bottom: 1.5rem;
 }
 
 .close_btn {
     position: absolute;
-    bottom: 0.5rem;
-    left: 38%;
-    width: 6rem;
-    height: 1.5rem;
-    font-size: 0.8rem;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 5%;
+    font-size: 100%;
+    padding: 0.5rem;
     font-weight: 800;
     color: white;
     background-color: black;

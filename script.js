@@ -49,7 +49,24 @@ fetch(endPoint)
 const closeBtn = document.querySelector(".close_btn");
 closeBtn.addEventListener("click", () => {
     console.log("Cliccato su Chiudi");
-    overlayDiv.classList.add("close_div");
+    overlayDiv.classList.add("close_div")
 });
 
-
+// const closeBodyClick = document.querySelector("body");
+// closeBodyClick.addEventListener("click", () => {
+//     if (!overlayDiv.classList.contains("close_div")) {
+//         console.log("Cliccato su Body");
+//         overlayDiv.classList.add("close_div");
+//     }
+// });
+// function closeOverlay(event) {
+//     if (event.target === overlayDiv) {
+//         console.log("Cliccato su Overlay");
+//         overlayDiv.classList.add("close_div");
+//     }
+// }
+// [document.querySelector(".close_btn"), document.querySelector("body")].forEach(item => {
+//     item.addEventListener("click", () => {
+//         overlayDiv.classList.add("close_div");
+//     });
+// })
