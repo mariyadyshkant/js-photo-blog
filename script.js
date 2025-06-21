@@ -15,7 +15,7 @@ fetch(endPoint)
     .then(data => {
         console.log(data);
         data.forEach(picture => {
-            const { title, url } = picture;
+            const { title, date, url } = picture;
             console.log(title, url);
             const picturesMarkUpStr = `
             <div class="col-4">    
@@ -25,6 +25,7 @@ fetch(endPoint)
                         <img class="img" src="${url}" alt="">
                     </div>
                     <div class="card_body">
+                        <p class="date">${date}</p>
                         <h2 class="card_title">${title}</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
