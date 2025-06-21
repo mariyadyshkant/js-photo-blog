@@ -1,4 +1,7 @@
 console.log("Photo Blog");
+// aggiungere date
+
+
 const row = document.querySelector(".row");
 console.log(row);
 const overlayDiv = document.querySelector("#overlay_div");
