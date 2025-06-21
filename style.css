@@ -114,55 +114,6 @@ p {
     z-index: 2;
 }
 
-/* MEDIA QUERY */
-@media screen and (max-width: 1440px) {
-    .container {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    header {
-        font-size: 2.5rem;
-    }
-
-    .col-4 {
-        width: calc(100% / 12 * 6);
-        margin: 4rem 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* header {
-        /* font-size: 1.8rem; */
-    /* } */
-
-    .col-4 {
-        width: calc(100% / 12 * 12);
-        margin: 4rem 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header {
-        font-size: 2rem;
-    }
-
-    .card_title {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 1.5rem;
-    }
-}
-
 /* OVERLAY */
 .open_div {
     position: fixed;
@@ -170,7 +121,7 @@ p {
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
-    max-width: 850px;
+    /* max-width: 850px; */
     background-color: white;
     padding: 1rem 1rem 2rem 1rem;
     z-index: 3;
@@ -198,5 +149,78 @@ p {
 
     &:hover {
         cursor: pointer
+    }
+}
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1440px) {
+    .container {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        font-size: 2.5rem;
+    }
+
+    .col-4 {
+        width: calc(100% / 12 * 6);
+        margin: 4rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .open_div {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* header {
+        /* font-size: 1.8rem; */
+    /* } */
+
+    .col-4 {
+        width: calc(100% / 12 * 12);
+        margin: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .open_div {
+        width: 90%
+    }
+
+    .close_btn {
+        width: 35%;
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 2rem;
+    }
+
+    .card_title {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .open_div {
+        width: 95%
+    }
+
+    .close_btn {
+        width: 50%;
     }
 }
